@@ -18,6 +18,7 @@ ARG YQ_VERSION="4.47.1"
 ARG TMUX_VERSION="3.2a"
 ARG GH_VERSION="2.86.0"
 
+
 RUN \
     dnf install -y \
       jq-${JQ_VERSION} \
@@ -34,7 +35,7 @@ RUN \
     && /tmp/aws/install \
          --bin-dir /usr/local/bin \
          --install-dir /usr/local/aws-cli \
-          --update \
+         --update \
     && rm -rf /usr/local/aws-cli/v2/current/dist/aws_completer \
               /usr/local/aws-cli/v2/current/dist/doc \
     \
